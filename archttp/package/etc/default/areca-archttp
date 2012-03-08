@@ -1,0 +1,2 @@
+# Enable or disable the Areca SATA and SAS RAID Storage Manager - Browser Interface.
+ENABLE_ARCHTTP=0

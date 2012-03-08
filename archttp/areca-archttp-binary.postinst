@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+  configure)
+    if [ ! -d /etc/areca ] ; then
+      mkdir -p /etc/areca 1> /dev/null 2>&1
+
+      cp -f /usr/share/areca-archttp-binary/archttpsrv.conf.default \
+	          /etc/areca/archttpsrv.conf 1> /dev/null 2>&1
+
+      chown root:root /etc/areca/archttpsrv.conf 1> /dev/null 2>&1
+      chmod u+rw-x,g+r-wx,o+r-wx /etc/areca/archttpsrv.conf 1> /dev/null 2>&1
+
+      ln -s -f /etc/areca/archttpsrv.conf \
+               /usr/sbin/archttpsrv.conf 1> /dev/null 2>&1
+    fi
+
+    ln -s -f /usr/sbin/archttp /usr/sbin/arc_http 1> /dev/null 2>&1
+  ;;
+esac
+
+#DEBHELPER#

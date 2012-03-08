@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+  purge)
+    rm -r -f /usr/sbin/arc_cli \
+             /usr/share/doc/areca-cli-binary 1> /dev/null 2>&1
+  ;;
+esac
+
+#DEBHELPER#

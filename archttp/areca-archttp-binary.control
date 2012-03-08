@@ -1,0 +1,23 @@
+Package: areca-archttp-binary
+Version: 1.87-1
+Date: Thu, 08 Mar 2012 11:45:00 +0000
+Architecture: amd64
+Maintainer: Krzysztof Wilczynski <krzysztof.wilczynski@linux.com>
+Uploaders: Krzysztof Wilczynski <krzysztof.wilczynski@linux.com>
+Standards-Version: 3.9.1
+Section: admin
+Priority: optional
+Essential: no
+Urgency: low
+Depends: libc6 (>= 2.4)
+Installed-Size: 2118124
+Recommends: areca-cli-binary
+Provides: areca-archttp-binary
+Homepage: http://www.areca.com.tw/
+Description: Areca SATA and SAS RAID Storage Manager - Browser Interface.
+  Areca Technology Corporation HTTP Proxy Server (Browser Interface) is provided
+  for you to configure and manage the Areca SATA or SAS RAID controller components
+  in Linux environments.
+  .
+  Through the HTTP Proxy Server (Browser Interface), you perform most of the storage
+  management tasks that you can perform with the McRAID storage manager GUI.

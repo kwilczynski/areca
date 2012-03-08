@@ -1,0 +1,26 @@
+Package: areca-cli-binary
+Version: 1.86-1
+Date: Thu, 08 Mar 2012 11:45:00 +0000
+Architecture: amd64
+Maintainer: Krzysztof Wilczynski <krzysztof.wilczynski@linux.com>
+Uploaders: Krzysztof Wilczynski <krzysztof.wilczynski@linux.com>
+Standards-Version: 3.9.1
+Section: admin
+Priority: optional
+Essential: no
+Urgency: low
+Depends: libc6 (>= 2.4)
+Installed-Size: 1918351
+Recommends: areca-archttp-binary
+Provides: areca-cli-binary
+Homepage: http://www.areca.com.tw/
+Description: Areca SATA and SAS RAID Storage Manager - Command Line Interface.
+  Areca Technology Corporation Command Line Interface (CLI) is provided for you to
+  configure and manage the Areca SATA or SAS RAID controller components in Linux
+  environments. The CLI is useful in environments where a graphical user interface
+  (GUI) is not available.
+  .
+  Through the Command Line Interface (CLI), you perform most of the storage management
+  tasks that you can perform with the McRAID storage manager GUI. With CLI, you can also
+  use the CLI commands in both interactive and non-interactive (script) mode, providing
+  higher level API functionalities.

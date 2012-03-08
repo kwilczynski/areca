@@ -1,0 +1,102 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          areca-archttp
+# Required-Start:    $local_fs $remote_fs
+# Required-Stop:     $local_fs $remote_fs
+# Should-Start:      $network
+# Should-Stop:       $network
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start the Areca SATA and SAS RAID Storage Manager - Browser Interface.
+# Description:       Start, stop and restart the Areca SATA and SAS RAID Storage Manager - Browser Interface.
+### END INIT INFO
+
+. /lib/lsb/init-functions
+
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
+
+SCRIPT_NAME="/etc/init.d/$(basename -- $0)"
+
+ARCHTTP_NAME='areca-archttp'
+ARCHTTP_HOME='/etc/areca'
+ARCHTTP_BINARY='/usr/sbin/archttp'
+ARCHTTP_PID_FILE='/var/run/archttp.pid'
+
+DESCRIPTION='Areca SATA and SAS RAID Storage Manager - Browser Interface'
+
+ENABLE_ARCHTTP=0
+
+[ -x $ARCHTTP_BINARY ] || exit 0
+
+[ -e /etc/default/$ARCHTTP_NAME ] && . /etc/default/$ARCHTTP_NAME
+
+case "$1" in
+  start)
+    log_daemon_msg "Starting $DESCRIPTION" $ARCHTTP_NAME
+
+    if [ $ENABLE_ARCHTTP != 1 ] ; then
+        log_progress_msg "(disabled, see /etc/default/${ARCHTTP_NAME})"
+    else
+      start-stop-daemon -S -q -b -m -p $ARCHTTP_PID_FILE -d $ARCHTTP_HOME -x $ARCHTTP_BINARY 2> /dev/null
+    fi
+
+    case $? in
+      0|1) log_end_msg 0 ;;
+      2)   log_end_msg 1 ;;
+    esac
+  ;;
+
+  stop)
+    log_daemon_msg "Stopping $DESCRIPTION" $ARCHTTP_NAME
+
+    start-stop-daemon -K -q -s INT -o -p $ARCHTTP_PID_FILE 2> /dev/null
+
+    case $? in
+      0|1) log_end_msg 0 ;;
+      2)   log_end_msg 1 ;;
+    esac
+  ;;
+
+  restart)
+    log_daemon_msg "Restarting $DESCRIPTION" $ARCHTTP_NAME
+
+    start-stop-daemon -K -q -s INT -o -p $ARCHTTP_PID_FILE 2> /dev/null
+
+    case $? in
+      0|1)
+        start-stop-daemon -S -q -b -m -p $ARCHTTP_PID_FILE -d $ARCHTTP_HOME -x $ARCHTTP_BINARY 2> /dev/null
+
+        case "$?" in
+          0) log_end_msg 0 ;;
+          1) log_end_msg 1 ;;
+          *) log_end_msg 1 ;;
+        esac
+      ;;
+
+      *)
+        log_end_msg 1
+      ;;
+    esac
+  ;;
+
+  reload)
+    log_daemon_msg "Reloading $DESCRIPTION" $ARCHTTP_NAME
+
+    start-stop-daemon -S -s HUP -q -b -m -p $ARCHTTP_PID_FILE -d $ARCHTTP_HOME -x $ARCHTTP_BINARY 2> /dev/null
+
+    case "$?" in
+      0|1) log_end_msg 0 ;;
+      2)   log_end_msg 1 ;;
+    esac
+  ;;
+
+  status)
+    status_of_proc -p $ARCHTTP_PID_FILE $ARCHTTP_BINARY ${ARCHTTP_BINARY##*/}
+  ;;
+
+  *)
+    log_action_msg "Usage: $SCRIPT_NAME {start|stop|restart|reload|status}" >&2
+    exit 3
+  ;;
+esac

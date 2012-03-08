@@ -1,0 +1,8 @@
+[GENERAL]
+BindingIp=0.0.0.0
+HTTPPort=8080
+SMTPPort=25
+ScanPci=YES
+ScanRs232=NO
+ScanInband=NO
+ConnInfo=NO
