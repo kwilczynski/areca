@@ -1,0 +1,4 @@
+This project contains relevant files that are needed to build Debian packages
+for Areca SATA and SAS RAID Storage Manager with the help of Effing Package
+Management (FPM) project and utilities.  Currently, both Command Line Interface
+(CLI) and the HTTP Proxy Server (Browser Interface) are available.
