@@ -10,7 +10,7 @@ Priority: optional
 Essential: no
 Urgency: low
 Depends: libc6 (>= 2.4)
-Installed-Size: 1918351
+Installed-Size: 2615326
 Recommends: areca-archttp-binary
 Provides: areca-cli-binary
 Homepage: http://www.areca.com.tw/
