@@ -1,0 +1,29 @@
+This package was debianized by Krzysztof Wilczynski <krzysztof.wilczynski@linux.com> on
+Thu, 08 Mar 2012 11:45:00 +0000.
+
+It was downloaded from http://www.areca.com.tw/.
+
+Copyright Holder: Areca Technology Corporation.
+
+License:
+
+	Copyright (C) 2004-2011 Areca Technology Corporation.
+	All rights reserved.
+
+	Areca Technology Corporation	
+        150 Commerce Way
+	Walnut, CA 91789
+	United States of America
+
+	This license applies to the GNU C library (glibc) which is used by the
+	statically linked version of Areca SATA and SAS RAID Storage Manager,
+	and the Command Line Interface (CLI) version.  The static version is
+	recommended, as use of that executable will guarantee that Areca SATA
+	and SAS RAID Storage Manager is compatible and has been tested with the
+	C library function calls.  No changes were made to the GNU C library.
+
+	For more information on glibc or the GNU project, see: http://www.gnu.org.
+
+On Debian systems, the complete text of the GNU General Public License can be
+found in /usr/share/common-licenses/GPL file, and the GNU Lesser General Public
+License in /usr/share/common-licenses/LGPL.

@@ -1,0 +1,20 @@
+areca-archttp-binary
+--------------------
+
+This packages contains Areca SATA and SAS RAID Storage Manager:
+
+- Browser Interface binary:
+
+  File:   archttp64.zip
+  MD5:    30fd2d786a2c1a623d5be00d0e0505d2
+  SHA1:   b612b75ed21b2364e1bf2fc60fc25d7856f32d2a
+  SHA256: ccb959ca3014dfb0e619e78003616d72f1d57b57b823ea05c5a5c1b1e249ec47
+  URL:    http://www.areca.com.tw/support/s_linux/linux.htm 
+
+- Command Line Interface manual:
+
+  File:   SAS_Manual.zip
+  MD5:    921fa64b7bb2be3c7ed87fa24c7f7e7a
+  SHA1:   a31bbd28b7bd9ba9ba312fb9282816fe57c5ad84
+  SHA256: 3549d371411a5231eb9cfac9442c9f498b8152edc88a8acb159d83bfc07c5971
+  URL:    http://www.areca.com.tw/support/s_linux/linux.htm

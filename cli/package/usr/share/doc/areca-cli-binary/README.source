@@ -1,0 +1,20 @@
+areca-cli-binary
+----------------
+
+This packages contains Areca SATA and SAS RAID Storage Manager:
+
+- Command Line Interface binary:
+
+  File:   cli64.zip
+  MD5:    98f6b079ab9ec5ed0f2e2b07bfaaaa84
+  SHA1:   0d9ab00cd659a607edcbf42d06432cf29d9fec70
+  SHA256: 870382281904fa9f2bcc0428981e6be51d88edaa91024e787827b5362c7b80c4
+  URL:    http://www.areca.com.tw/support/s_linux/linux.htm 
+
+- Command Line Interface manual:
+
+  File:   CLIManual.zip
+  MD5:    2d367c704002a4a6407673e5b7e0c0c7
+  SHA1:   6ae692c21665dd77f3f782c92f066a45b40f6959
+  SHA256: b3084e56f0b8451d6a8f0ceb47824f7389bb3cbd5eed8c8ca844e886e9824296
+  URL:    http://www.areca.com.tw/support/s_linux/linux.htm
