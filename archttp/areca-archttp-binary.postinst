@@ -8,7 +8,7 @@ case "$1" in
       mkdir -p /etc/areca 1> /dev/null 2>&1
 
       cp -f /usr/share/areca-archttp-binary/archttpsrv.conf.default \
-	          /etc/areca/archttpsrv.conf 1> /dev/null 2>&1
+            /etc/areca/archttpsrv.conf 1> /dev/null 2>&1
 
       chown root:root /etc/areca/archttpsrv.conf 1> /dev/null 2>&1
       chmod u+rw-x,g+r-wx,o+r-wx /etc/areca/archttpsrv.conf 1> /dev/null 2>&1

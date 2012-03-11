@@ -5,10 +5,10 @@ set -e
 case "$1" in
   purge)
     rm -r -f /etc/areca                          \
-	     /usr/sbin/arc_http                  \
-	     /usr/sbin/archttpsrv.conf           \
-	     /usr/share/areca-archttp-binary     \
-	     /usr/share/doc/areca-archttp-binary 1> /dev/null 2>&1
+             /usr/sbin/arc_http                  \
+             /usr/sbin/archttpsrv.conf           \
+             /usr/share/areca-archttp-binary     \
+             /usr/share/doc/areca-archttp-binary 1> /dev/null 2>&1
   ;;
 esac
 
