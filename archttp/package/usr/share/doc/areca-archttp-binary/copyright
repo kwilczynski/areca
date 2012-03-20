@@ -30,7 +30,7 @@ License:
 	and SAS RAID Storage Manager is compatible and has been tested with the
 	C library function calls.  No changes were made to the GNU C library.
 
-	For more information on glibc or the GNU project, see: http://www.gnu.org.
+	For more information on glibc or the GNU project, see: http://www.gnu.org/.
 
 On Debian systems, the complete text of the GNU General Public License can be
 found in /usr/share/common-licenses/GPL file, and the GNU Lesser General Public
