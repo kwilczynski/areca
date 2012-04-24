@@ -19,6 +19,14 @@ case "$1" in
 
     ln -s -f /usr/sbin/archttp /usr/sbin/arc_http 1> /dev/null 2>&1
   ;;
+
+  abort-upgrade|abort-remove|abort-deconfigure)
+  ;;
+
+  *)
+    echo "The postinst script called with unknown argument \`$1'" >&2
+    exit 1
+  ;;
 esac
 
 #DEBHELPER#
