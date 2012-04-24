@@ -1,6 +1,6 @@
 Package: areca-archttp-binary
 Version: 1.87-1
-Date: Thu, 08 Mar 2012 11:45:00 +0000
+Date: Tue, 24 Apr 2012 18:00:00 +0100
 Architecture: amd64
 Maintainer: Krzysztof Wilczynski <krzysztof.wilczynski@linux.com>
 Uploaders: Krzysztof Wilczynski <krzysztof.wilczynski@linux.com>
@@ -10,7 +10,7 @@ Priority: optional
 Essential: no
 Urgency: low
 Depends: libc6 (>= 2.4)
-Installed-Size: 10182470
+Installed-Size: 10140948
 Recommends: areca-cli-binary
 Provides: areca-archttp-binary
 Homepage: http://www.areca.com.tw/
