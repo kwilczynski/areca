@@ -41,7 +41,7 @@ case "$1" in
       status_of_proc -p $ARCHTTP_PID_FILE $ARCHTTP_BINARY ${ARCHTTP_BINARY##*/} 1> /dev/null
 
       case $? in
-        0|1|2)
+        0)
           log_progress_msg "is already running (PID: $(cat $ARCHTTP_PID_FILE))"
         ;;
 
